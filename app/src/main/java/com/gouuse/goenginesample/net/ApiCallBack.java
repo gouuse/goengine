@@ -28,6 +28,7 @@ public abstract class ApiCallBack<T> extends NetCallback<T> {
     @Override
     public void onComplete() {
         super.onComplete();
+        finish();
     }
 
     protected abstract void finish();

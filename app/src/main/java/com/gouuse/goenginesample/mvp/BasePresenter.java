@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.gouuse.goenginesample.base;
+package com.gouuse.goenginesample.mvp;
 
 /**
  * Created by reiserx on 2017/5/23.
@@ -24,19 +24,27 @@ package com.gouuse.goenginesample.base;
  */
 
 public abstract class BasePresenter<V> {
-    protected V mvpView;
+    protected V mView;
 
     public BasePresenter(V view) {
         attachView(view);
     }
 
 
+    /**
+     * 初始化操作
+     *
+     * @param mvpView view
+     */
     private void attachView(V mvpView) {
-        this.mvpView = mvpView;
+        this.mView = mvpView;
     }
 
 
+    /**
+     * 页面销毁时会调用
+     */
     public void detachView() {
-        this.mvpView = null;
+        this.mView = null;
     }
 }

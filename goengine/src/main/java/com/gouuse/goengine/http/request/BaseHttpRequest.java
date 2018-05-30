@@ -62,7 +62,7 @@ public abstract class BaseHttpRequest<R extends BaseHttpRequest> extends BaseReq
         return cacheExecute(type);
     }
 
-    public void request(NetCallback callback) {
+    public <T> void request(NetCallback callback) {
         generateGlobalConfig();
         generateLocalConfig();
         execute(callback);

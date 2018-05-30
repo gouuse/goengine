@@ -2,11 +2,14 @@ package com.gouuse.goenginesample.base;
 
 import android.os.Bundle;
 
+import com.gouuse.goenginesample.mvp.BasePresenter;
+import com.gouuse.goenginesample.mvp.IView;
+
 /**
  * Created by reiserx on 2018/4/2.
  * desc :
  */
-public abstract class MvpActivity<P extends BasePresenter> extends BaseActivity implements BaseView {
+public abstract class MvpActivity<P extends BasePresenter> extends BaseActivity implements IView {
     protected P mvpPresenter;
 
     @Override
@@ -25,47 +28,4 @@ public abstract class MvpActivity<P extends BasePresenter> extends BaseActivity 
         }
     }
 
-    @Override
-    public void showLoading() {
-
-    }
-
-    @Override
-    public void hideLoading() {
-
-    }
-    @Override
-    public void openActivityOnTokenExpire() {
-
-    }
-
-    @Override
-    public void onError(int resId) {
-
-    }
-
-    @Override
-    public void onError(String message) {
-
-    }
-
-    @Override
-    public void showMessage(String message) {
-
-    }
-
-    @Override
-    public void showMessage(int resId) {
-
-    }
-
-    @Override
-    public boolean isNetworkConnected() {
-        return false;
-    }
-
-    @Override
-    public void hideKeyboard() {
-
-    }
 }

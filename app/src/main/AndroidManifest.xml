@@ -19,11 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
-
-        <activity android:name=".view.login.LoginActivity"/>
-        <activity android:name=".view.ImageListActivity"/>
         <activity android:name=".view.UploadDownActivity"/>
+        <activity android:name=".view.meizi.MeiziActivity">
+        </activity>
     </application>
 
 </manifest>
